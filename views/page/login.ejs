@@ -1,0 +1,43 @@
+<%- include('../partials/head')%> 
+
+<section class="login">
+ 
+     <h2 class="title-login">Inicia Sesión</h2>
+    
+    <form action="/usuarios/login" class="login-form" method="post">
+        <label for="">Nombre del usuario:</label>
+        <input type="text" name="username" required placeholder="Ingrese su nombre">
+        <label for="">Contraseña:</label>
+        <input type="password" name="password" id="password" required placeholder="Ingrese su contraseña">
+
+        <button type="submit">Inicia Sesión</button>
+    </form>
+
+    <% if (success_msg) { %>
+        <p><%= success_msg %></p>
+    <% } %>
+    
+    <% if (error_msg) { %>
+        <p><%= error_msg %></p>
+    <% } %>
+    
+    <% if (errors && errors.length > 0) { %>
+        <ul >
+            <% errors.forEach(function(error) { %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+<div class="link-container">
+    <p>¿No te has registrado? <a href="/usuarios/registro">Registrate</a></p>
+</div>
+
+
+
+
+</section>
+
+
+
+<%- include('../partials/footer')%>

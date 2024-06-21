@@ -1,0 +1,96 @@
+<%- include('../partials/head')%> 
+
+<section>
+<div class="product-container detail">
+    <div class="product-descripcion">
+        
+        <img src="/images/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+       <div class="descripcion">
+            <p><%= producto.descripcion %></p>
+       </div> 
+       
+    </div>
+
+    <div class="product-info detail-info">
+        <div class="descripcion">
+            <h1><%= producto.nombre %></h1>
+            <p class="price">Precio: $<%= producto.precio %></p>
+        </div>
+       
+        <div class="btn-container">
+            <div class="btn-agregar-favorito">
+                <form action="/productos/favorito/agregar" method="post">
+                    <input type="hidden" name="productId" value="<%= producto._id %>">
+                    <button type="submit">Agregar al Carrito</button>
+                </form>
+            </div>
+
+        <div class="btn-container">
+            <div class="btn-agregar">
+                <form action="/productos/carrito/agregar" method="post">
+                    <input type="hidden" name="productId" value="<%= producto._id %>">
+                    <button type="submit">Agregar al Carrito</button>
+                </form>
+            </div>
+            
+
+            <div class="btn-comprar">
+                <form action="/productos/carrito/exito" method="post">
+                    <button type="submit" class="btn-comprar">Comprar</button>
+                </form>
+            </div>
+
+
+    
+        </div>
+    </div>
+    
+    </div>
+      
+      
+   
+    <div class="enlace">
+
+    <h2 class="title">Otros Productos</h2>
+
+    <div class="product-container">
+       
+        <% products.forEach(product => { %>
+            <div class="product-card">
+            <a href="/productos/shop/<%= product._id %>">
+               
+                    <img src="/images/<%= product.imagen%>" alt="<%= product.nombre_producto %>" class="product-image">
+                    <div class="info-card">
+                        <h2><%= product.nombre %></h2>
+                        <p class="price-other"> $<%= product.precio %> </p>
+                    </div>
+                    
+            </a>
+    
+            <div class="btn-container">
+                <div class="btn-agregar">
+                    <form action="/productos/carrito/agregar" method="post">
+                        <input type="hidden" name="productId" value="<%= product._id %>">
+                        <button type="submit">Agregar al Carrito</button>
+                    </form>
+            
+                </div>
+              
+            </div>
+           
+            
+               
+            </div>
+    
+       <% })%>
+    
+    </div>
+   
+    
+</div>
+   
+
+
+</section>
+
+<%- include('../partials/footer')%>

@@ -1,0 +1,51 @@
+<%- include('../partials/head')%> 
+
+
+<div class="container">
+    <h2 class="title-favorito title">Mi carrito</h2>
+    <% if (success_msg) { %>
+        <p class="msg"><%= success_msg %></p>
+    <% } %>
+    <% if (error_msg) { %>
+        <p class="msg"><%= error_msg %></p>
+    <% } %>
+<div class="container-carrito">
+
+        <div class="left">
+        <% if (carrito && carrito.length > 0) { %>
+            <ul>
+                <% carrito.forEach(item => { %>
+                    
+                    <div class="favorito-item">
+                       
+                            <img src="/images/<%= item.imagen %>" alt="<%= item.nombre %>" >
+                    
+                        <div class="nombre">
+                            <h2><%= item.nombre %></h2>
+                        </div>
+                        
+                       <div class="detail-favorito"> 
+                        
+                        <div class="agregar">
+                        <div class="quitar">
+                            <form action="/productos/favorito/quitar" method="post">
+                                <input type="hidden" name="productId" value="<%= item._id %>">
+                                <button type="submit">-</button>
+                            </form>
+                        </div>
+
+                        
+                    </div>
+                    </div>
+                <% }) %>
+            </ul>
+
+        </div>
+
+        <% } else { %>
+            <p class="msg-vacio">El carrito está vacío.</p>
+        <% } %>
+
+
+
+<%- include('../partials/footer')%> 

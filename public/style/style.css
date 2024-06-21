@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*NAV*/
+header {
+    width: 100%;
+    background-color: white;
+    color: #72422B;
+    padding: 15px 0px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  
+}
+
+.logo{
+    width: 80px;
+}
+
+
+nav a {
+    color: #72422B;
+    text-decoration: none;
+    margin: 0px 15px;
+    transition: color 0.3s;
+    font-size: 20px;
+    font-family: "Roboto Slab", serif;
+}
+
+nav a:hover {
+    color: #D49475 ;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;  
+   
+}
+
+.right-icons i {
+    color: #72422B;
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.right-icons i:hover {
+    color:#D49475;
+}
+
+.right-icons p{
+    font-family: "Roboto Slab", serif;
+}
+
+header hr{
+    color: #72422B;
+}
+
+
+/* HOME */
+
+.title {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 400;
+    color: #555;
+}
+
+.product-container{
+    margin: 0 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    gap: 25px;
+    padding: 20px;
+    font-family: "Roboto Slab", serif;
+    
+}
+
+.product-container img{
+    width: 250px;
+    border-radius: 6px;
+    
+
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product-card a{
+    
+    text-decoration: none;
+    color: #555;
+
+}
+ .product-card .info-card{
+    height: 100px;
+
+ }
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 250px;
+    height: 350px;
+}
+
+.product-card h2 {
+    margin: 20px 0 5px;
+    font-size: 14px;
+    font-family: "Roboto Slab", serif;
+    font-weight:400;
+}
+
+
+.product-card .price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #555;
+    
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.btn-container .btn-agregar{
+    margin: 0 5px;
+    
+}
+
+.btn-agregar button, .btn-comprar button{
+    width: 200px;
+    padding: 20px;
+    background-color: #D49475;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+
+.btn-agregar button:hover,
+.btn-comprar button:hover {
+    background-color: #e6b095;
+    
+}
+.product{
+    border: none;
+}
+
+
+
+.product-type{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 25px;
+    padding: 20px;
+    font-family: "Roboto Slab", serif;
+    
+    
+}
+
+.product-type .product-card h2{
+    font-weight:300;
+    font-size: 22px;
+    
+}
+
+/* DETALLE PRODUCTO */
+
+.product-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.product-descripcion img{
+    width: 450px;
+    border-radius: 6px;
+}
+.product-descripcion p{
+    color: #555;
+    font-size: 22px;
+    
+}
+.descripcion{
+    width: 450px;
+    color: #555;
+    align-items: center;
+}
+.descripcion .price{
+    font-size: 30px;
+}
+
+
+.product-info{
+    font-size: 20px;
+    margin-left: 20px;
+    
+}
+
+.detail-info{
+    margin-left: 60px ;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.enlace{
+    
+    width: 100%;
+    padding: 0;
+}
+
+.enlace img{
+    width: 200px;
+    height: 300px;
+}
+
+.enlace .title{
+    font-size: 29px;
+}
+
+.product-card .info-card h2{
+    font-size: 12px;
+}
+
+/* CARRITO */
+
+.title-carrito{
+    margin: 20px 150px;
+    text-align: start;
+}
+
+.msg{
+    margin:20px 150px;
+    font-style: normal;
+    color: #555;
+    font-family: "Roboto Slab", serif;
+    
+}
+.msg-vacio{
+    margin:20px 0px;
+    font-style: normal;
+    color: #555;
+    font-family: "Roboto Slab", serif;
+}
+
+.container-carrito{
+    display: flex;
+    margin-left: 150px;
+
+}
+.left{
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    color: #555;
+    padding-right: 40px; 
+}
+
+.carrito-item{
+    margin-top: 0 60px;
+    padding: 10px;
+    display: flex;
+    width: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    
+    
+}
+
+.nombre{
+    padding-left: 20px;
+    margin-top: 75px;
+    width: 400px;
+   
+}
+
+.carrito-item img{
+    width: 170px;
+    height: 250px;
+    
+}
+
+.detail-carrito{
+    display: flex;
+    margin-top: 100px ;
+    margin-left: 20px;
+    
+}
+
+.subtotal{
+    margin-top: 75px ;
+    font-size: 20px;
+}
+
+.cantidad input{
+    font-size: 20px;
+    width: 30px;
+    height: 31px;
+    text-align: center;
+}
+
+.quitar button, .agregar button{
+    font-size: 20px;
+    width: 30px;
+    height: 35px;
+}
+
+.rigth{
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.total{
+    font-size: 40px;
+    color: #555;
+}
+
+/* LOGIN Y REGISTER */
+
+
+.login, .register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px;  
+    font-family: "Roboto Slab", serif;
+    color: #555;
+    
+}
+
+.login-form, .register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+    max-width: 400px;
+
+}
+
+.login-form label, .register-form label{
+
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.login-form input, .register-form input{
+    width: 360px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #a8a3a3;
+    border-radius: 5px;
+}
+
+.login-form button, .register-form button{
+    margin-top:15px ;
+    width: 390px;
+    background-color: #D49475;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
+.register-form button:hover,
+.login-form button:hover {
+    background-color: #e6b095;
+}   
+
+/* FOOTER */
+footer{
+    width: auto;
+    background-color: white;
+    color: #72422B;
+    padding: 15px 0px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Roboto Slab", serif ;
+}
+
+/* ABOUT */
+.about{
+    margin: 20px 300px ;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Slab", serif ;
+    color: #555;
+    font-size: 19px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    
+}
+
+.about .img{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: 50px;
+
+}
+
+.fin{
+    width: 40%;
+    margin-top: -230px;
+    margin-left: 150px;
+    text-align: end;   
+}
+
+/* CONTACT  */
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+   
+  
+}
+
+.contact-label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+   width: 420px;
+    border: 1px solid #a8a3a3;
+    border-radius: 5px;
+}
+
+
+.contact-form button{
+    margin-top:15px ;
+    width: 420px;
+    background-color: #D49475;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* 
+
+
+.login-form input, .register-form input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #a8a3a3;
+    border-radius: 5px;
+}
+
+.login-form button, .register-form button{
+   margin-top:15px ;
+    width: 420px;
+    background-color: #D49475;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+} */
+
+/* Responsive */
+
+
+
+
+

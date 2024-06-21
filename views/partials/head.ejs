@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>EcommnersPanaderia</title>
+
+</head>
+<body>
+    
+<header>
+
+    <div class="logo">
+        <img src="/images/logo.svg" >
+
+    </div>
+
+
+    <div class= "left-icons">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/productos/shop">Shop</a>
+            
+          <!-- <a href="/carrito">Carrito</a> -->
+        </nav>
+    </div>
+   
+
+    <div class="right-icons">
+        <%if(user) { %>
+
+            <p><%= user.username %></p>
+            
+            <a href="/usuarios/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <% }else{  %>
+            <a href="/usuarios/login"><i class="fa-regular fa-user"></i></a> <!-- Font Awesome icon for register -->
+       
+        <% } %>
+        <a href="/productos/favoritos"><i class="fa-regular fa-heart"></i></a> 
+        
+        <a href="/productos/carrito"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Font Awesome icon for shopping cart -->
+        
+    </div>
+
+    
+</header>
+<hr>

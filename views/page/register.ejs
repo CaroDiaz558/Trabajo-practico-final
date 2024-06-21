@@ -1,0 +1,41 @@
+<%- include('../partials/head')%> 
+
+
+<section class="register">
+    
+    <h2 class="title-register">Registro</h2>
+
+    <form action="/usuarios/registro" class="register-form" method="post">
+        <label for="">Nombre del usuario:</label>
+        <input type="text" name="username" required placeholder="Ingrese su nombre">
+        <label for="">Email:</label>
+        <input type="email" name="email" required placeholder="Ingrese su email">
+        <label for="">Contraseña:</label>
+        <input type="password" name="password" id="password" required placeholder="Ingrese su contraseña">
+       
+
+        <label for="">Confirmar contraseña:</label>
+        <input type="password" name="confirmPassword" required placeholder="Confirme su contraseña">
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <% if (errors && errors.length > 0) { %>
+        <ul>
+            <% errors.forEach(function(error) { %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+    <% } %> 
+
+    <div class="link-container">
+        <p>¿Ya tenés cuenta? <a href="/usuarios/login">Inicia Sesión</a></p>
+    </div>
+
+    
+</section>
+
+
+
+
+<%- include('../partials/footer')%>

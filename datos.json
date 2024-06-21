@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "nombre": "Tarta de Frutilla",
+        "descripcion": "Clasica tarta de frutilla y crema. ",
+        "precio": 50,
+        "imagen": "tartaFrutilla.jpg", 
+        "tipo": "pasteleria"
+    },
+    {
+        "id": 2,
+        "nombre": "Pan de molde salvado con semillas",
+        "descripcion": "Clásico pan de molde con salvado y harina integral, contiene semillas de amapola, sésamo blanco, girasol y lino.",
+        "precio": 80,
+        "imagen": "panIntegral.jpg",
+        "tipo": "panaderia"
+    },
+    {
+        "id": 3,
+        "nombre": "Pan de Campo",
+        "descripcion": "Pan hecho en horno de barro, crujiente por fuera.",
+        "precio": 80,
+        "imagen": "panCampo.jpg",
+         "tipo": "panaderia"
+        },
+    
+    
+    {
+        "id": 4,
+        "nombre": "Medialuna de manteca x6 unidades",
+        "descripcion": "Medialunas hechas con masa hojaldrada elaborada con manteca.",
+        "precio": 90,
+        "imagen": "medialunas.jpg",
+        "tipo": "panaderia"
+    },
+    
+    {
+        "id": 5,
+        "nombre": "Roll de canela",
+        "descripcion": "Masa de manteca hojaldrada con canela, azúcar mascabo y semilla.s",
+        "precio": 50,
+        "imagen": "rolCanela.jpg",
+        "tipo": "pasteleria"
+    },
+    
+    {
+        "id": 6,
+        "nombre": "Pan de molde blanco con semillas",
+        "descripcion": "Clásico pan de molde lactal con semillas de amapola, sesámo blanco, girasol y lino.",
+        "precio": 80,
+        "imagen": "panBlanco.jpg",
+        "tipo": "panaderia"
+    },
+    
+    {
+        "id": 7,
+        "nombre": "Muffins de Arándanos",
+        "descripcion": "Muffins de Arándanos ideales para la tarde.",
+        "precio": 40,
+        "imagen": "muffinsArandanos.jpg",
+        "tipo": "pasteleria"
+    },
+    
+    {
+        "id": 8,
+        "nombre": "Muffins de Calabza",
+        "descripcion": "Muffins de Calabazas ideales para la tarde.",
+        "precio": 40,
+        "imagen": "muffinsCalabaza.jpg",
+        "tipo": "pasteleria"
+    },
+    
+    {
+        "id": 9,
+        "nombre": "Bombas de crema",
+        "descripcion": "Bombas de crema ideales para la tarde.",
+        "precio": 40,
+        "imagen": "bombaCrema.jpg",
+        "tipo": "pasteleria"
+    },
+    
+    
+    {
+        "id": 10,
+        "nombre": "Galletas de avena",
+        "descripcion": "Galletas de avena con chips de chocolate",
+        "precio": 30,
+        "imagen": "galletas.jpg",
+        "tipo": "panaderia"
+    },
+    
+    {
+        "id": 11,
+        "nombre": "Lemon Pie",
+        "descripcion": "Lemon Pie de Limon con merengue italiano.",
+        "precio": 150,
+        "imagen": "lemonPie.jpg",
+        "tipo": "pasteleria"
+    },
+    {
+        "id": 12,
+        "nombre": "Pan Francés",
+        "descripcion": "Pan crujiente y dorado, ideal para el desayuno.",
+        "precio": 50,
+        "imagen": "panFrances.jpg", 
+        "tipo": "panaderia"
+    },
+    
+   {
+            "id": 13,
+            "nombre": "Tarta de Arándanos ",
+            "descripcion": "Tarta de Arándanos y crema.",
+            "precio": 50,
+            "imagen": "tartaArandanos.jpg", 
+            "tipo": "pasteleria"
+    }
+
+
+    ]
+    

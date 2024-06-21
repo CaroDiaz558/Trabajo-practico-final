@@ -1,0 +1,78 @@
+<%- include('../partials/head')%> 
+
+
+
+<div class="container">
+    <h2 class="title-carrito title">Mi carrito</h2>
+    <% if (success_msg) { %>
+        <p class="msg"><%= success_msg %></p>
+    <% } %>
+    <% if (error_msg) { %>
+        <p class="msg"><%= error_msg %></p>
+    <% } %>
+<div class="container-carrito">
+
+        <div class="left">
+        <% if (carrito && carrito.length > 0) { %>
+            <ul>
+                <% carrito.forEach(item => { %>
+                    
+                    <div class="carrito-item">
+                       
+                            <img src="/images/<%= item.imagen %>" alt="<%= item.nombre %>" >
+                    
+                        <div class="nombre">
+                            <h2><%= item.nombre %></h2>
+                        </div>
+                        
+                       <div class="detail-carrito"> 
+                        
+                        <div class="agregar">
+                            
+                            <form action="/productos/carrito/agregar" method="post">
+                                <input type="hidden" name="productId" value="<%= item._id %>">
+                                <button type="submit">+</button>
+                            </form>
+                        </div>
+                        <div class="cantidad">
+                            <input type="text" value="<%= item.cantidad %>"></input>
+                        </div>
+                        <div class="quitar">
+                            <form action="/productos/carrito/quitar" method="post">
+                                <input type="hidden" name="productId" value="<%= item._id %>">
+                                <button type="submit">-</button>
+                            </form>
+                        </div>
+                        <div class="subtotal">
+                            <p class="price">Subtotal: $<%= item.subtotal %></p>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <% }) %>
+            </ul>
+
+        </div>
+
+        <div class="rigth">
+    
+            <p class="total">Total: $<%= total %></p>
+            <div class="btn-comprar">
+                <form action="/productos/carrito/exito" method="post">
+                <button type="submit" >Comprar</button>
+                </form>
+            </div>
+        </div>
+            
+
+        <% } else { %>
+            <p class="msg-vacio">El carrito está vacío.</p>
+        <% } %>
+        
+  
+    
+</div>
+</div>
+
+
+<%- include('../partials/footer')%>
