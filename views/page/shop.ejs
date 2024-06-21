@@ -15,6 +15,7 @@
                     </div>
                     
             </a>
+
     
             <div class="btn-container">
                 <div class="btn-agregar">
@@ -25,10 +26,29 @@
             
                 </div>
               
-            </div>
            
-            
+           
+            <% if (favoriteProductIds.includes(product._id.toString())) { %>
+                
+                    <div class="btn-favorito">
+                        <form action="/productos/favorito/quitar" method="post">
+                            <input type="hidden" name="productId" value="<%= product._id %>">
+                            <button type="submit"><i class="fa-solid fa-heart"></i></button>
+                        </form>
+                    </div>
                
+            <%} else{%>
+               
+                    <div class="btn-favorito">
+                        <form action="/productos/favorito/agregar" method="post">
+                            <input type="hidden" name="productId" value="<%= product._id %>">
+                            <button type="submit"><i class="fa-regular fa-heart"></i></button>
+                        </form>
+                    </div>
+              
+           <% } %>
+            
+        </div>
             </div>
     
        <% })%>

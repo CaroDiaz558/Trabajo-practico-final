@@ -159,9 +159,8 @@ header hr{
     
 }
 
-.btn-agregar button, .btn-comprar button{
-    width: 200px;
-    padding: 20px;
+.btn-agregar button, .btn-comprar button, .quitar-favorito button{
+    width: 180px;
     background-color: #D49475;
     color: white;
     padding: 15px;
@@ -175,6 +174,10 @@ header hr{
     transition: background-color 0.3s ease;
    
 }
+.btn-comprar button{
+    padding: 25px;
+    margin-left: 10px ;
+}
 
 
 .btn-agregar button:hover,
@@ -182,6 +185,8 @@ header hr{
     background-color: #e6b095;
     
 }
+
+
 .product{
     border: none;
 }
@@ -268,10 +273,11 @@ header hr{
     font-size: 12px;
 }
 
-/* CARRITO */
 
-.title-carrito{
-    margin: 20px 150px;
+/* CARRITO  y FAVORITOS*/
+
+.title-carrito, .title-favorito{
+    margin: 20px 300px;
     text-align: start;
 }
 
@@ -289,19 +295,21 @@ header hr{
     font-family: "Roboto Slab", serif;
 }
 
-.container-carrito{
+.container-carrito, .container-favorito{
     display: flex;
-    margin-left: 150px;
+    margin-left: 80px;
 
 }
+
 .left{
     font-family: "Roboto Slab", serif;
     display: flex;
     color: #555;
+    margin-left: 200px;
     padding-right: 40px; 
 }
 
-.carrito-item{
+.carrito-item, .favorito-item{
     margin-top: 0 60px;
     padding: 10px;
     display: flex;
@@ -309,8 +317,11 @@ header hr{
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 30px;
-    
-    
+
+}
+
+.favorito-item{
+    align-items: center;
 }
 
 .nombre{
@@ -319,14 +330,24 @@ header hr{
     width: 400px;
    
 }
+.nombre-favorito{
+    width: 400;
+ 
+    margin: 20px;
 
-.carrito-item img{
+}
+.nombre-favorito h2{
+    color: #555;
+    text-decoration: none;
+}
+
+.carrito-item img, .favorito-item img{
     width: 170px;
     height: 250px;
     
 }
 
-.detail-carrito{
+.detail-carrito, .detail-favorito{
     display: flex;
     margin-top: 100px ;
     margin-left: 20px;
@@ -423,11 +444,25 @@ header hr{
 
 }
 
+.btn-favorito button{
+    color: #D49475;
+    border: none;
+    background-color: transparent;
+    /* margin: 0px 15px; */
+    transition: color 0.3s;
+    font-size: 35px;
+    cursor: pointer;
+   
+} 
 
 .register-form button:hover,
-.login-form button:hover {
+.login-form button:hover{
     background-color: #e6b095;
 }   
+
+.btn-favorito button{
+    color: #e6b095;
+}
 
 /* FOOTER */
 footer{
@@ -519,34 +554,8 @@ footer{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-/* 
 
 
-.login-form input, .register-form input{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #a8a3a3;
-    border-radius: 5px;
-}
-
-.login-form button, .register-form button{
-   margin-top:15px ;
-    width: 420px;
-    background-color: #D49475;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-} */
 
 /* Responsive */
 

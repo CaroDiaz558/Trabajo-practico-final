@@ -11,7 +11,9 @@ const {obtenerTodosProductos,
       compraExitosa,
       buscarPorTipoDulce,
       buscarPorTipoSalado,
-      homeProductos} = require('../controllers/product');
+      verFavoritos,
+      agregarProductoFavorito,
+      quitarProductoFavorito} = require('../controllers/product');
 
 
 //Shop
@@ -29,6 +31,11 @@ router.route('/carrito/exito').post(Authenticated, compraExitosa);
 router.route('/pasteleria').get(buscarPorTipoDulce);
 router.route('/panaderia').get(buscarPorTipoSalado);
 
+
+//FAVORITOS
+router.route('/favorito').get(Authenticated, verFavoritos);
+router.route('/favorito/agregar').post(Authenticated, agregarProductoFavorito);
+router.route('/favorito/quitar').post(Authenticated, quitarProductoFavorito);
 
 
 

@@ -2,23 +2,27 @@ const Productos= require('../models/product');
   //PRODUCTOS
 const obtenerTodosProductos = async (req, res)=>{
     const products= await Productos.find();
-
+    const favorito = req.session.favorito || [];
+    const favoriteProductIds = favorito.map(item => item.productId);
     console.log('Todo ok, busqueda realizada');
-    res.render('page/shop', {products: products})
+    res.render('page/shop', {products: products, favoriteProductIds:favoriteProductIds})
 }
 
 const detalleProducto = async (req, res) => {
     const productId = req.params.id;
-
+    
     try {
         const producto = await Productos.findById(productId);
+        const favorito = req.session.favorito || [];
+        const favoriteProductIds = favorito.map(item => item.productId);
+        
         const products = await Productos.find().limit(5);
 
         if (!producto) {
             return res.status(404).send('Producto no encontrado');
         }
 
-        res.render('page/product', { producto: producto, products:products });
+        res.render('page/product', { producto: producto, products:products, favoriteProductIds:favoriteProductIds });
     } catch (error) {
         console.log(error);
         res.status(500).send('Error al mostrar el detalle del producto');
@@ -240,7 +244,8 @@ const agregarProductoFavorito = async (req, res) => {
         if (productIndex == -1) {
 
             const nuevoProducto = { productId: productId };
-            carrito.push(nuevoProducto);
+
+            favorito.push(nuevoProducto);
             req.session.favorito = favorito;
             req.flash('success_msg', 'Producto agregado a favoritos.');
             
@@ -271,21 +276,20 @@ const quitarProductoFavorito = async (req, res) => {
         if (!producto) {
             console.log('Producto no encontrado');
             req.flash('error_msg', 'Producto no encontrado');
-            return res.redirect('/productos/carrito');
+            return res.redirect('/productos/favorito');
         }
 
         const productIndex = favorito.findIndex(item => item.productId === productId);
 
         if (productIndex !== -1) {
-            carrito.splice(productIndex, 1);
+            favorito.splice(productIndex, 1);
             req.session.favorito = favorito;
-            req.flash('success_msg', 'Producto quitado del carrito.');
+            req.flash('success_msg', 'Producto quitado de favoritos.');
             
         }else{
             req.flash('El Producto no está entre tus favoritos')
         }
 
-       
         res.redirect('/productos/favorito');
     } catch (error) {
         console.error('Error al quitar producto de favoritos:', error.message);
@@ -295,9 +299,6 @@ const quitarProductoFavorito = async (req, res) => {
 
     
 };
-
-
-
 
 
 
