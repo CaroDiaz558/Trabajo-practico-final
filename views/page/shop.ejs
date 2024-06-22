@@ -2,17 +2,20 @@
 
 <section>
     <h2 class="title">Todos Nuestros Productos</h2>
-    <div class="product-container">
+    <div class="product-container product-shop">
        
         <% products.forEach(product => { %>
-            <div class="product-card">
+            <div class="product-card card-shop">
             <a href="/productos/shop/<%= product._id %>">
                
                     <img src="/images/<%= product.imagen%>" alt="<%= product.nombre_producto %>" class="product-image">
                     <div class="info-card">
-                        <h2><%= product.nombre %></h2>
+                        <p><%= product.nombre %></p>                        
+                   
+                    <div>
                         <p class="price"> $<%= product.precio %> </p>
                     </div>
+                </div>
                     
             </a>
 

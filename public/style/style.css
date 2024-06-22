@@ -30,7 +30,6 @@ nav a {
     text-decoration: none;
     margin: 0px 15px;
     transition: color 0.3s;
-    font-size: 20px;
     font-family: "Roboto Slab", serif;
 }
 
@@ -71,7 +70,6 @@ header hr{
     text-align: center;
     font-family: "Roboto Slab", serif;
     font-style: italic;
-    font-size: 32px;
     font-weight: 400;
     color: #555;
 }
@@ -126,18 +124,27 @@ header hr{
     transform: translateY(-5px);
 }
 
-.product-image {
+.product-image{
     width: 250px;
     height: 350px;
 }
 
-.product-card h2 {
+.product-card p {
     margin: 20px 0 5px;
     font-size: 14px;
     font-family: "Roboto Slab", serif;
     font-weight:400;
 }
+.product-card{
+    padding: 0;
+}
 
+.info-card{
+    width: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
 
 .product-card .price {
     font-size: 19px;
@@ -151,6 +158,7 @@ header hr{
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 10px;
 
 }
 
@@ -166,7 +174,7 @@ header hr{
     padding: 15px;
     border-radius: 8px;
     border: none;
-    font-size: 15px;
+    font-size: 13px;
     font-family: "Roboto Slab", serif;
     font-weight: bold;
     text-transform: uppercase;
@@ -175,7 +183,6 @@ header hr{
    
 }
 .btn-comprar button{
-    padding: 25px;
     margin-left: 10px ;
 }
 
@@ -222,7 +229,7 @@ header hr{
 }
 
 .product-descripcion img{
-    width: 450px;
+    width: 300px;
     border-radius: 6px;
 }
 .product-descripcion p{
@@ -231,7 +238,7 @@ header hr{
     
 }
 .descripcion{
-    width: 450px;
+    width: 300px;
     color: #555;
     align-items: center;
 }
@@ -277,7 +284,7 @@ header hr{
 /* CARRITO  y FAVORITOS*/
 
 .title-carrito, .title-favorito{
-    margin: 20px 300px;
+    margin: 20px 140px;
     text-align: start;
 }
 
@@ -295,9 +302,12 @@ header hr{
     font-family: "Roboto Slab", serif;
 }
 
+
 .container-carrito, .container-favorito{
     display: flex;
-    margin-left: 80px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content:center;
 
 }
 
@@ -305,13 +315,10 @@ header hr{
     font-family: "Roboto Slab", serif;
     display: flex;
     color: #555;
-    margin-left: 200px;
     padding-right: 40px; 
 }
 
 .carrito-item, .favorito-item{
-    margin-top: 0 60px;
-    padding: 10px;
     display: flex;
     width: auto;
     border: 1px solid #ddd;
@@ -324,52 +331,62 @@ header hr{
     align-items: center;
 }
 
+
 .nombre{
-    padding-left: 20px;
+    padding-left: 15px;
     margin-top: 75px;
-    width: 400px;
+    width: 250px;
    
 }
-.nombre-favorito{
-    width: 400;
- 
-    margin: 20px;
 
-}
-.nombre-favorito h2{
-    color: #555;
+.left a{
     text-decoration: none;
 }
 
+.nombre-favorito{
+    width: 300;
+    margin: 15px;
+  
+
+}
+.nombre-favorito p{
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+
 .carrito-item img, .favorito-item img{
-    width: 170px;
-    height: 250px;
-    
+    width: 120px;
+    height: 200px;
+   
+}
+
+.favorito-item{
+    padding-right: 10px;
 }
 
 .detail-carrito, .detail-favorito{
     display: flex;
-    margin-top: 100px ;
-    margin-left: 20px;
-    
+    align-items: center;
 }
 
 .subtotal{
     margin-top: 75px ;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .cantidad input{
-    font-size: 20px;
-    width: 30px;
-    height: 31px;
+    font-size: 15px;
+    width: 20px;
+    height: 21px;
     text-align: center;
 }
 
 .quitar button, .agregar button{
-    font-size: 20px;
-    width: 30px;
-    height: 35px;
+    font-size: 15px;
+    width: 20px;
+    height: 27px;
 }
 
 .rigth{
@@ -378,11 +395,14 @@ header hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 200px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 15px;
+}
+.rigth p{
+    font-size: 25px;
 }
 
 .total{
@@ -502,13 +522,16 @@ footer{
     justify-content: end;
     align-items: end;
     margin-top: 50px;
+    margin-right: -130px;
 
+}
+.about .img img{
+    width: 500px;
 }
 
 .fin{
     width: 40%;
-    margin-top: -230px;
-    margin-left: 150px;
+    margin-top: -240px;
     text-align: end;   
 }
 
@@ -525,6 +548,8 @@ footer{
 }
 
 .contact-label{
+    font-family: "Roboto Slab", serif ;
+    color: #555;
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -542,6 +567,7 @@ footer{
 .contact-form button{
     margin-top:15px ;
     width: 420px;
+    margin-bottom: 30px;
     background-color: #D49475;
     color: white;
     border: none;
@@ -555,9 +581,792 @@ footer{
     transition: background-color 0.3s ease;
 }
 
-
-
 /* Responsive */
+/* 1024px a 768px */
+
+@media all and (max-width: 1024px){ 
+    
+    /*NAV*/
+    
+    .logo{
+        width: 70px;
+    }
+
+    .left-icons a{
+        font-size: 15px;
+    }
+    
+    .right-icons p{
+        font-size: 13px;
+    }
+
+    .right-icons i{
+        font-size: 1.1em;
+      
+    }
+
+/* HOME */
+
+.title {
+    font-size: 20px;
+}
+
+.product-container img{
+    width: 150px;
+    height: 250px;
+
+}
+
+ .product-card .info-card{
+    height: 80px;
+
+ }
+
+.product-image {
+    width: 250px;
+    height: 350px;
+}
+
+.info-card{
+    width: 150px;
+}
+
+.product-card p{
+    font-size: 12px;
+}
+
+
+.product-card .price {
+    font-size: 15px;    
+}
+
+
+.btn-agregar button, .btn-comprar button, .quitar-favorito button{
+    width: 80px;
+    border: none;
+    font-size: 10px;
+
+}
+
+.product-container-type img{
+    width: 250px;
+    height: 350px;
+}
+.btn-comprar button{
+    margin-left: 10px ;
+}
+
+.product-type .product-card h2{
+    font-size: 18px;
+    
+}
+
+/* DETALLE PRODUCTO */
+
+
+.product-descripcion img{
+    width: 200px;
+    height: 300px;
+    border-radius: 6px;
+}
+.product-descripcion p{
+    font-size: 15px;
+    
+}
+.descripcion{
+    width: 200px;
+}
+
+.descripcion .price{
+    font-size: 18px;
+}
+
+.product-info{
+    font-size: 1px;
+    margin-left: 20px;
+    
+}
+
+.detail-info{
+    margin-left: 60px ;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.btn-favorito button{
+    font-size: 25px;
+}
+
+.enlace{
+    
+    width: 100%;
+    padding: 0;
+}
+
+.enlace img{
+    width: 150px;
+    height: 200px;
+}
+
+.enlace .title{
+    font-size: 20px;
+}
+
+.product-card .info-card p{
+    font-size: 10px;
+}
+
+
+/* CARRITO  y FAVORITOS*/
+
+
+.msg{
+
+    font-size:15px ;
+    
+}
+
+
+.nombre{
+    padding-left: 15px;
+    margin-top: 75px;
+    width: 250px;
+   
+}
+
+.left a{
+    text-decoration: none;
+}
+
+.nombre-favorito{
+    width: 300;
+    margin: 15px;
+  
+
+}
+.nombre-favorito p{
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+
+.carrito-item img, .favorito-item img{
+    width: 120px;
+    height: 200px;
+   
+}
+
+.favorito-item{
+    padding-right: 10px;
+}
+
+.detail-carrito, .detail-favorito{
+    display: flex;
+    align-items: center;
+}
+
+.subtotal{
+    margin-top: 75px ;
+    font-size: 15px;
+}
+
+.cantidad input{
+    font-size: 15px;
+    width: 20px;
+    height: 21px;
+    text-align: center;
+}
+
+.quitar button, .agregar button{
+    font-size: 15px;
+    width: 20px;
+    height: 27px;
+}
+
+.rigth{
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.rigth p{
+    font-size: 25px;
+}
+
+.total{
+    font-size: 40px;
+    color: #555;
+}
+
+
+
+/* FOOTER */
+footer{
+
+    font-size: 18px;
+    
+}
+
+/* ABOUT */
+.about{
+  
+    font-size: 15px;
+}
+
+
+.about .img{
+   
+    margin-right: -160px;
+
+}
+.about .img img{
+    width: 400px;
+}
+
+.fin{
+    width: 40%;
+    margin-top: -250px;
+    margin-right: 10px;
+    
+}
+
+
+}
+
+/* Estilos para dispositivos móviles desde 768px hasta 480px  ANCHO:768 ALTO:1366 */
+@media all and (max-width: 768px){
+   
+   /* NAV */
+
+    .logo{
+        width: 60px;
+    }
+    
+    .left-icons a, .rigth-icons p{
+        font-size: 12px;
+    }
+
+    .right-icons i {
+        font-size: 0.8em;
+    }
+    
+/* HOME */
+
+.title {
+    font-size: 17px;
+}
+
+.product-container{
+    margin: 0px;
+    flex-wrap: nowrap;
+}
+
+.product-container img{
+    width: 110px;
+    height: 180px;
+
+}
+
+ .product-card .info-card{
+    height: 80px;
+
+ }
+
+.product-image {
+    width: 200px;
+    height: 300px;
+}
+
+.info-card{
+    width: 110px;
+}
+
+.product-card p{
+    font-size: 10px;
+}
+
+
+.product-card .price {
+    font-size: 12px;    
+}
+
+
+.btn-agregar button, .btn-comprar button, .quitar-favorito button{
+    width: 80px;
+    border: none;
+    padding:5px;
+    font-size: 8px;
+
+}
+
+.product-container-type img{
+    width: 180px;
+    height: 280px;
+}
+.btn-comprar button{
+    margin-left: 10px ;
+}
+
+
+.product-type .product-card h2{
+    font-weight:300;
+    font-size: 18px;
+    
+}
+
+/* DETALLE DE PRODUCTO */
+
+.product-descripcion img{
+    width: 150px;
+    height: 250px;
+}
+.product-descripcion p{
+    font-size: 12px;
+    
+}
+.descripcion{
+    width: 150px;
+}
+
+.descripcion .price{
+    font-size: 15px;
+}
+
+.product-info{
+    font-size: 1px;
+    margin-left: 20px;
+    
+}
+
+.detail-info{
+    margin-left: 0px ;
+}
+
+.btn-favorito button{
+    font-size: 20px;
+}
+
+/* SHOP */
+
+.product-shop{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card-shop img{
+    width: 180px;
+    height: 280px;
+}
+
+/* CARRITO  y FAVORITOS*/
+
+
+.msg{
+
+    font-size:12px ;
+    
+}
+
+
+.nombre{
+    padding-left: 10px;
+    width: 150px; 
+}
+
+.nombre p{
+    font-size: 12px;
+    
+   
+}
+
+.nombre-favorito p{
+    font-size: 12px;
+}
+
+
+.carrito-item img, .favorito-item img{
+    width: 100px;
+    height: 200px;
+   
+}
+
+.favorito-item{
+    padding-right: 8px;
+}
+
+.subtotal{
+    margin-top: 75px ;
+    font-size: 12px;
+}
+
+.cantidad input{
+    font-size: 12px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+}
+
+.quitar button, .agregar button{
+    font-size: 12px;
+    width: 17px;
+    height: 24px;
+}
+
+.rigth{
+   
+    width: 200px;
+    height: 100px;
+   
+}
+.rigth p{
+    font-size: 15px;
+}
+
+.total{
+    font-size: 20px;
+    color: #555;
+}
+
+
+/* LOGIN Y REGISTER */
+
+.login, .register{
+    
+    margin: 0px; 
+  
+}
+
+
+.login-form, .register-form{
+    max-width: 200px;
+}
+
+
+
+.login-form input, .register-form input{
+    font-size: 12px;
+    width: 200px;
+
+}
+.login-form button, .register-form button{
+    margin-top:15px ;
+    width: 230px;
+   
+}
+
+.link-container{
+    font-size: 15px;
+}
+
+
+
+
+/* FOOTER */
+footer{
+   
+    font-size: 12px;
+  
+}
+
+/* ABOUT */
+.about{
+    margin: 20px 100px ;
+    font-size: 11px;
+}
+
+
+.about .img{
+  
+    margin-right: 0px;
+
+}
+.about .img img{
+    width: 300px;
+}
+
+.fin{
+    width: 40%;
+    margin-top: -150px;
+    text-align: end;   
+}
+
+
+/* CONTACT  */
+
+.contact-form label{
+    font-size: 12px;
+}
+
+.contact-form input, .contact-form textarea{
+    font-size: 12px ;
+    width: 250px;
+  
+}
+
+
+.contact-form button{
+   
+    width: 280px;
+   
+}
+
+}
+    
+/* Estilos para dispositivos móviles desde 320px hasta 480px */
+@media all and (max-width: 480px){
+ 
+    /* NAV */
+   
+    .logo{
+        width: 40px;
+    }
+    
+    .left-icons a, .right-icons p {
+        font-size: 10px;
+    }
+
+    .right-icons i {
+     
+        font-size: 0.7em;
+        margin-left: 10px;
+    }
+
+    /* HOME */
+
+.title {
+    font-size: 13px;
+}
+
+.product-container{
+    margin: 0px;
+    flex-wrap: nowrap;
+}
+
+.product-container img{
+    width: 110px;
+    height: 120px;
+
+}
+
+
+.product-image {
+    width: 150px;
+    height: 250px;
+}
+
+.info-card{
+    width: 110px;
+}
+
+.product-card p{
+    font-size: 10px;
+}
+
+
+.product-card .price {
+    font-size: 15px;    
+}
+
+
+.btn-agregar button, .btn-comprar button, .quitar-favorito button{
+    width: 80px;
+    border: none;
+    font-size: 8px;
+
+}
+
+.product-container-type img{
+    width: 150px;
+    height: 250px;
+}
+.btn-comprar button{
+    margin-left: 10px ;
+}
+
+
+
+.product-type .product-card h2{
+    font-weight:300;
+    font-size: 15px;
+    
+}
+
+/* DETALLE PRODUCTO */
+
+
+.product-descripcion img{
+    width: 120px;
+    height: 220px;
+}
+.product-descripcion p{
+    font-size: 15px;
+    
+}
+.descripcion{
+    width: 120px;
+}
+.descripcion p{
+    font-size: 10px;
+}
+
+.descripcion .price{
+    font-size: 12px;
+}
+
+.product-info{
+    font-size: 10px;
+    margin-left: 20px;
+    
+}
+
+.detail-info{
+    margin-left: 20px ;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.enlace{
+    
+    width: 100%;
+    padding: 0;
+}
+
+.enlace .product-container{
+    display: flex;
+    flex-direction: column;
+}
+.enlace img{
+    width: 110px;
+    height: 150px;
+}
+
+.enlace .title{
+    font-size: 18px;
+}
+
+.product-card .info-card p{
+    font-size: 10px;
+}
+
+/* SHOP */
+
+.card-shop img{
+    width: 160px;
+    height: 260px;
+}
+
+/* CARRITO  y FAVORITOS*/
+
+
+.msg{
+
+    font-size:10px ;
+    
+}
+
+
+.nombre{
+    padding-left: 10px;
+    width: 90px; 
+}
+
+.nombre p{
+    font-size: 10px;
+    
+   
+}
+
+.nombre-favorito p{
+    font-size: 10px;
+}
+
+
+.carrito-item img, .favorito-item img{
+    width: 70px;
+    height: 170px;
+   
+}
+
+.favorito-item{
+    padding-right: 8px;
+}
+
+.subtotal{
+    margin-top: 75px ;
+    font-size: 10px;
+}
+
+.cantidad input{
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+  
+}
+
+.quitar button, .agregar button{
+    font-size: 10px;
+    width: 15px;
+    height: 22px;
+}
+
+.rigth{
+   
+    width: 190px;
+    height: 100px;
+   
+}
+.rigth p{
+    font-size: 15px;
+}
+
+.total{
+    font-size: 20px;
+    color: #555;
+}
+
+/* FOOTER */
+footer{
+   
+    font-size: 10px;
+  
+}
+
+/* ABOUT */
+.about{
+    margin: 20px 50px ;
+    font-size: 8px;
+}
+
+
+.about .img{
+  
+    margin-right: 0px;
+
+}
+.about .img img{
+    width: 150px;
+}
+
+.fin{
+    width: 40%;
+    margin-top: -100px;
+    text-align: end;   
+}
+
+}
+
+
 
 
 

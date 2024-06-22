@@ -18,13 +18,11 @@
                 <% favorito.forEach(item => { %>
                 <a href="/productos/shop/<%= item._id %>">
                     <div class="favorito-item">
-
-                       
                             
                             <img src="/images/<%= item.imagen %>" alt="<%= item.nombre %>" >
                     
                         <div class="nombre-favorito">
-                            <h2><%= item.nombre %></h2>
+                            <p><%= item.nombre %></p>
                         </div>            
 
                         <div class="quitar-favorito">
